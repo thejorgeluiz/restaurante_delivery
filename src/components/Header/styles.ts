@@ -1,12 +1,17 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import Fundo from '../../assets/imagens/fundo.png'
 
 export const HeaderBar = styled.header`
-  width: 100%;
-  background-color: ${cores.laranjaClaro};
-  padding: 24px;
-  margin-bottom: 0px;
+border: 2px solid red;
+
+width: 100%;
+  height: 280px;
   position: relative;
+
+  background-image: url(${Fundo});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `
 
 export const CenterContent = styled.div`
@@ -14,34 +19,21 @@ export const CenterContent = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 16px;
+
+  img {
+    width: 88px;
+    height: 40px;
+    margin-top: 28px;
+  }
+
   h3 {
-    margin-top: 16px;
+    width: 380px;
+    margin-top: 96px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
     color: #e66767;
   }
 `
 
-export const LogoLink = styled.a`
-  display: block;
-
-  img {
-    display: block;
-    margin-bottom: 16px;
-  }
-`
-
-export const LinkCart = styled.a`
-  position: absolute;
-  top: 24px;
-  right: 24px;
-
-  display: flex;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-
-  img {
-    margin-left: 16px;
-  }
-`
