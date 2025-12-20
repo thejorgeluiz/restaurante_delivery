@@ -1,28 +1,39 @@
 import { Link } from 'react-router-dom'
-import { CenterContent } from '../Footer/styles'
-import { Container } from './styles'
-import logo from '../../assets/imagens/logo.png'
-import SocialMedias from '../../../src/assets/imagens/redes sociais.png'
+import {
+  Container,
+  CenterContent,
+  SocialIcons,
+  FooterText,
+  Logo
+} from './styles'
+import logoImg from '../../assets/imagens/logo.png'
+import facebookIcon from '../../assets/imagens/facebook.png'
+import instagramIcon from '../../assets/imagens/instagram.png'
+import twitterIcon from '../../assets/imagens/twitter.png'
 
 const Footer = () => (
   <Container>
-    <div className="container">
-      <CenterContent>
-        <Link to="/">
-          <img src={logo} alt="EFood" />
-        </Link>
+    <CenterContent>
+      <Logo src={logoImg} alt="EFood" />
 
+      <SocialIcons>
         <Link to="#">
-          <img src={SocialMedias} alt="redes_sociais" />
+          <img src={facebookIcon} alt="Facebook" />
         </Link>
+        <Link to="#">
+          <img src={instagramIcon} alt="Instagram" />
+        </Link>
+        <Link to="#">
+          <img src={twitterIcon} alt="Twitter" />
+        </Link>
+      </SocialIcons>
 
-        <p>
-          A efood é uma plataforma para divulgação de estabelecimentos, a
-          responsabilidade pela entrega, qualidade dos produtos é toda do
-          estabelecimento contratado.
-        </p>
-      </CenterContent>
-    </div>
+      <FooterText>
+        A efood é uma plataforma para divulgação de estabelecimentos, a
+        responsabilidade pela entrega, qualidade dos produtos é toda do
+        estabelecimento contratado.
+      </FooterText>
+    </CenterContent>
   </Container>
 )
 

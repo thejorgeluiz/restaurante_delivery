@@ -7,7 +7,7 @@ type Props = {
   to?: string
   onclick?: () => void
   children: string
-  variant?: 'default' | 'categories'
+  variant?: 'default' | 'categories' | 'card'
 }
 
 const Button = ({

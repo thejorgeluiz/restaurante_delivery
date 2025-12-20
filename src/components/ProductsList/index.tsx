@@ -1,35 +1,40 @@
 import Game from '../../models/Games'
 import Product from '../Product'
-
+import ProductCategories from '../ProductCategories' // import novo
 import { Container, List } from './styles'
 
 type Props = {
-  title: string
   games: Game[]
-  variant?: 'default' | 'categories'
+  title?: string
+  variant?: 'home' | 'categories'
 }
 
-const ProductList = ({ title, games, variant = 'default' }: Props) => (
+const ProductsList = ({ games, variant = 'home' }: Props) => (
   <Container>
-    <h2>{title}</h2>
-    <div className="container">
-      <List>
-        {games.map((game, index) => (
+    <List variant={variant}>
+      {games.map((game, index) =>
+        variant === 'categories' ? (
+          <ProductCategories
+            key={game.tipo}
+            tipo={game.tipo}
+            description={game.description}
+            image={game.image}
+          />
+        ) : (
           <Product
-            key={index}
-            destaque={index === 0 ? game.destaque : ''}
+            key={game.tipo}
+            destaque={index === 0 ? game.destaque : undefined}
             categoria={game.categoria}
             tipo={game.tipo}
             nota={game.nota}
             description={game.description}
-            infos={game.infos}
             image={game.image}
-            variant={variant}
+            buttonLink={undefined}
           />
-        ))}
-      </List>
-    </div>
+        )
+      )}
+    </List>
   </Container>
 )
 
-export default ProductList
+export default ProductsList

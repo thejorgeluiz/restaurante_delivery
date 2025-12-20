@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import Fundo from '../../assets/imagens/fundo.png'
 
 export const HeaderBar = styled.header`
-border: 2px solid red;
+  border: 2px;
 
-width: 100%;
+  width: 100%;
   height: 280px;
   position: relative;
 
@@ -21,8 +21,6 @@ export const CenterContent = styled.div`
   text-align: center;
 
   img {
-    width: 88px;
-    height: 40px;
     margin-top: 28px;
   }
 
@@ -36,4 +34,3 @@ export const CenterContent = styled.div`
     color: #e66767;
   }
 `
-

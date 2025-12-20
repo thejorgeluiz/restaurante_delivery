@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom'
 const Header = () => (
   <HeaderBar>
     <CenterContent>
-      <Link to="/">
-        <img src={logo} alt="EFood" />
-      </Link>
+      <img src={logo} alt="EFood" />
 
       <h3>Viva experiências gastronômicas no conforto da sua casa</h3>
     </CenterContent>

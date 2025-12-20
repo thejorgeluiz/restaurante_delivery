@@ -1,49 +1,58 @@
 import Tag from '../Tag'
-import { Card, Descrição, ImageWrapper, Nota, Tags, Titulo } from './styles'
-import Pizza from '../../assets/imagens/pizza.png'
 import Button from '../Button'
+import {
+  Card,
+  ImageWrapper,
+  Tags,
+  Content,
+  Header,
+  Title,
+  Nota,
+  Description
+} from './styles'
+
+import Star from '../../assets/imagens/estrela.png'
 
 type Props = {
-  destaque: string
+  destaque?: string
   categoria: string
   tipo: string
   description: string
-  infos: string
-  image: string
   nota: string
-  variant?: 'default' | 'categories'
+  image: string
+  buttonLink?: string
 }
 
 const Product = ({
   destaque,
   categoria,
   tipo,
-  nota,
   description,
-  infos,
+  nota,
   image,
-  variant = 'default'
+  buttonLink = '/categories'
 }: Props) => (
-  <Card variant={variant}>
+  <Card>
     <ImageWrapper>
       <img src={image} alt={tipo} />
-
       <Tags>
         {destaque && <Tag>{destaque}</Tag>}
         <Tag>{categoria}</Tag>
       </Tags>
     </ImageWrapper>
-
-    <Titulo>{tipo}</Titulo>
-    <Descrição>{description}</Descrição>
-    <Button
-      type={variant === 'categories' ? 'button' : 'link'} // link na Home, button em Categories
-      title={infos}
-      to={variant === 'default' ? '/categories' : undefined} // só Home
-      variant={variant}
-    >
-      {infos}
-    </Button>
+    <Content>
+      <Header>
+        <Title>{tipo}</Title>
+        <Nota>
+          {nota}
+          <img src={Star} alt="estrela" />
+        </Nota>
+      </Header>
+      <Description>{description}</Description>
+      <Button type="link" to={buttonLink} title="Saiba mais" variant="card">
+        Saiba mais
+      </Button>
+    </Content>
   </Card>
 )
 

@@ -12,12 +12,16 @@ export const GlobalCss = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #3a3504ff;
+    font-family: 'Roboto', sans-serif;
+  }
 
-}
   body {
-  background-color: #FFF8F2;
+    background-color: #FFF8F2;
+  }
 
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 
   .container {
