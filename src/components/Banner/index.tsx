@@ -1,4 +1,4 @@
-import { Imagem, TipoComida, NomeRestaurante } from './styles'
+import { Imagem, TipoComida, NomeRestaurante, Conteudo } from './styles'
 
 type BannerProps = {
   imagem: string
@@ -8,8 +8,10 @@ type BannerProps = {
 
 const Banner = ({ imagem, tipoComida, nomeRestaurante }: BannerProps) => (
   <Imagem imagem={imagem}>
-    <TipoComida>{tipoComida}</TipoComida>
-    <NomeRestaurante>{nomeRestaurante}</NomeRestaurante>
+      <Conteudo className="container">
+        <TipoComida>{tipoComida}</TipoComida>
+        <NomeRestaurante>{nomeRestaurante}</NomeRestaurante>
+      </Conteudo>
   </Imagem>
 )
 

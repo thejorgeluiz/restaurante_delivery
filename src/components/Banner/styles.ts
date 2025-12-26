@@ -1,19 +1,20 @@
 import styled from 'styled-components'
 
 export const Imagem = styled.div<{ imagem: string }>`
-  position: relative;
   width: 100%;
   height: 280px;
   background-image: url(${(props) => props.imagem});
   background-size: cover;
   background-position: center;
+`
+export const Conteudo = styled.div`
+ height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-left: 171px; // alinhando com link "Restaurantes"
-  padding-top: 20px;
-  padding-bottom: 20px;
+  justify-content: space-between; /* 👈 ISSO resolve tudo */
+  padding: 20px 0;
 `
+
 export const TipoComida = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-weight: 100;

@@ -18,12 +18,9 @@ export const HeaderBar = styled.header`
 `
 
 export const CenterContent = styled.div`
-  width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 `
 
 export const LeftLink = styled(Link)`
