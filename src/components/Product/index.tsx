@@ -1,7 +1,6 @@
 import Tag from '../Tag'
 import Button from '../Button'
-import {
-  Card,
+import { Card,
   ImageWrapper,
   Tags,
   Content,
@@ -10,9 +9,7 @@ import {
   Nota,
   Description
 } from './styles'
-
 import Star from '../../assets/imagens/estrela.png'
-
 type Props = {
   destaque?: string
   categoria: string
@@ -22,7 +19,6 @@ type Props = {
   image: string
   buttonLink?: string
 }
-
 const Product = ({
   destaque,
   categoria,

@@ -8,10 +8,10 @@ type BannerProps = {
 
 const Banner = ({ imagem, tipoComida, nomeRestaurante }: BannerProps) => (
   <Imagem imagem={imagem}>
-      <Conteudo className="container">
-        <TipoComida>{tipoComida}</TipoComida>
-        <NomeRestaurante>{nomeRestaurante}</NomeRestaurante>
-      </Conteudo>
+    <Conteudo className="container">
+      <TipoComida>{tipoComida}</TipoComida>
+      <NomeRestaurante>{nomeRestaurante}</NomeRestaurante>
+    </Conteudo>
   </Imagem>
 )
 

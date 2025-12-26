@@ -8,10 +8,10 @@ export const Imagem = styled.div<{ imagem: string }>`
   background-position: center;
 `
 export const Conteudo = styled.div`
- height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 👈 ISSO resolve tudo */
+  justify-content: space-between;
   padding: 20px 0;
 `
 
