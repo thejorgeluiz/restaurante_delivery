@@ -11,13 +11,13 @@ export const Card = styled.div`
 
 export const ImageWrapper = styled.div`
   position: relative;
-  height: 217px; /* ← imagem fixa */
+  height: 217px;
   flex-shrink: 0;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* MUITO importante */
+    object-fit: cover;
     display: block;
   }
 `
@@ -39,7 +39,7 @@ export const Content = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ← ESSENCIAL */
+  align-items: flex-start;
 `
 
 export const Header = styled.div`

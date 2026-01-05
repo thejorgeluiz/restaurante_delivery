@@ -1,28 +1,29 @@
 class Game {
-  destaque: string
-  categoria: string
+  id: number
+  titulo: string
+  destacado: boolean
   tipo: string
-  nota: string
-  description: string
-  infos: string
-  image: string
+  avaliacao: number
+  descricao: string
+  capa: string
 
   constructor(
-    destaque: string,
-    categoria: string,
+    id: number,
+    titulo: string,
+    destacado: boolean,
     tipo: string,
-    nota: string,
-    description: string,
-    infos: string,
-    image: string
+    avaliacao: number,
+    descricao: string,
+    capa: string
   ) {
-    this.destaque = destaque
-    this.categoria = categoria
+    this.id = id
+    this.titulo = titulo
+    this.destacado = destacado
     this.tipo = tipo
-    this.nota = nota
-    this.description = description
-    this.infos = infos
-    this.image = image
+    this.avaliacao = avaliacao
+    this.descricao = descricao
+    this.capa = capa
   }
 }
+
 export default Game

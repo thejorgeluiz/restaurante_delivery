@@ -1,4 +1,4 @@
-// App.tsx
+
 import { BrowserRouter, useLocation } from 'react-router-dom'
 
 import Header from './components/Header'
@@ -11,13 +11,13 @@ import Footer from './components/Footer'
 function AppWrapper() {
   const location = useLocation()
 
-  // Se estiver em /categories, usa o HeaderCategories
-  const isCategoriesPage = location.pathname === '/categories'
+  // Header normal apenas na Home
+  const isHomePage = location.pathname === '/'
 
   return (
     <>
       <GlobalCss />
-      {isCategoriesPage ? <HeaderCategories /> : <Header />}
+      {isHomePage ? <Header /> : <HeaderCategories />}
       <Rotas />
       <Footer />
     </>

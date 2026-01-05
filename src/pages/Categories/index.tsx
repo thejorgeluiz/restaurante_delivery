@@ -5,67 +5,62 @@ import Game from '../../models/Games'
 import Pizza from '../../assets/imagens/pizza.png'
 
 const promocoes: Game[] = [
-  {
-    destaque: '',
-    categoria: '',
-    tipo: 'Pizza Marguerita',
-    nota: '',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    infos: 'Adicionar ao carrinho',
-    image: Pizza
-  },
-  {
-    destaque: '',
-    categoria: '',
-    tipo: 'Pizza Marguerita',
-    nota: '',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    infos: 'Adicionar ao carrinho',
-    image: Pizza
-  },
-  {
-    destaque: '',
-    categoria: '',
-    tipo: 'Pizza Marguerita',
-    nota: '',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    infos: 'Adicionar ao carrinho',
-    image: Pizza
-  },
-  {
-    destaque: '',
-    categoria: '',
-    tipo: 'Pizza Marguerita',
-    nota: '',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    infos: 'Adicionar ao carrinho',
-    image: Pizza
-  },
-  {
-    destaque: '',
-    categoria: '',
-    tipo: 'Pizza Marguerita',
-    nota: '',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    infos: 'Adicionar ao carrinho',
-    image: Pizza
-  },
-  {
-    destaque: '',
-    categoria: '',
-    tipo: 'Pizza Marguerita',
-    nota: '',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    infos: 'Adicionar ao carrinho',
-    image: Pizza
-  }
+  new Game(
+    1,
+    'Pizza Marguerita',
+    false,
+    'Italiana',
+    0,
+    'Clássica Marguerita',
+    Pizza
+  ),
+  new Game(
+    2,
+    'Pizza Pepperoni',
+    false,
+    'Italiana',
+    0,
+    'Pepperoni crocante',
+    Pizza
+  ),
+  new Game(
+    3,
+    'Pizza Quatro Queijos',
+    false,
+    'Italiana',
+    0,
+    'Queijos selecionados',
+    Pizza
+  ),
+  new Game(
+    4,
+    'Pizza Portuguesa',
+    false,
+    'Italiana',
+    0,
+    'Presunto, ovos e cebola',
+    Pizza
+  ),
+  new Game(
+    5,
+    'Pizza Calabresa',
+    false,
+    'Italiana',
+    0,
+    'Calabresa e cebola',
+    Pizza
+  ),
+  new Game(
+    6,
+    'Pizza Frango com Catupiry',
+    false,
+    'Italiana',
+    0,
+    'Frango desfiado',
+    Pizza
+  )
 ]
+
 const Categories = () => (
   <>
     <Banner
@@ -73,7 +68,7 @@ const Categories = () => (
       tipoComida="Italiana"
       nomeRestaurante="La Dolce Vita Trattoria"
     />
-    <ProductsList games={promocoes} title="" variant="categories" />
+    <ProductsList games={promocoes} variant="categories" />
   </>
 )
 

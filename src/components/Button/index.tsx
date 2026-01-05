@@ -5,7 +5,7 @@ type Props = {
   type: 'button' | 'link'
   title: string
   to?: string
-  onclick?: () => void
+  onClick?: () => void
   children: string
   variant?: 'default' | 'categories' | 'card'
 }
@@ -14,7 +14,7 @@ const Button = ({
   type,
   title,
   to,
-  onclick,
+  onClick,
   children,
   variant = 'default'
 }: Props) => {
@@ -23,7 +23,7 @@ const Button = ({
       <ButtonContainer
         type="button"
         title={title}
-        onClick={onclick}
+        onClick={onClick}
         variant={variant}
       >
         {children}
