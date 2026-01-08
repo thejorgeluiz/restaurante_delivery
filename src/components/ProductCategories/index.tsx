@@ -7,9 +7,17 @@ type Props = {
   tipo: string
   description: string
   image: string
+  price: number
+  serving: string
 }
 
-const ProductCategories = ({ tipo, description, image }: Props) => {
+const ProductCategories = ({
+  tipo,
+  description,
+  image,
+  price,
+  serving
+}: Props) => {
   const [modalOpen, setModalOpen] = useState(false)
 
   return (
@@ -40,6 +48,8 @@ const ProductCategories = ({ tipo, description, image }: Props) => {
         image={image}
         title={tipo}
         description={description}
+        price={price}
+        serving={serving}
       />
     </>
   )

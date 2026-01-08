@@ -6,6 +6,8 @@ class Game {
   avaliacao: number
   descricao: string
   capa: string
+  preco: number
+  porcao: string
 
   constructor(
     id: number,
@@ -14,7 +16,9 @@ class Game {
     tipo: string,
     avaliacao: number,
     descricao: string,
-    capa: string
+    capa: string,
+    preco: number,
+    porcao: string
   ) {
     this.id = id
     this.titulo = titulo
@@ -23,6 +27,8 @@ class Game {
     this.avaliacao = avaliacao
     this.descricao = descricao
     this.capa = capa
+    this.preco = preco
+    this.porcao = porcao
   }
 }
 

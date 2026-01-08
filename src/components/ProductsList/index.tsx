@@ -17,6 +17,8 @@ const ProductsList = ({ games, variant = 'home' }: Props) => (
             tipo={item.nome}
             description={item.descricao}
             image={item.foto}
+            price={item.preco}
+            serving={item.porcao}
           />
         ) : (
           <Product

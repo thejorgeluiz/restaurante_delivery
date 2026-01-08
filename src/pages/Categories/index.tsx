@@ -12,7 +12,9 @@ const promocoes: Game[] = [
     'Italiana',
     0,
     'Clássica Marguerita',
-    Pizza
+    Pizza,
+    49.9,
+    'Serve 2 pessoas'
   ),
   new Game(
     2,
@@ -21,7 +23,9 @@ const promocoes: Game[] = [
     'Italiana',
     0,
     'Pepperoni crocante',
-    Pizza
+    Pizza,
+    54.9,
+    'Serve 2 pessoas'
   ),
   new Game(
     3,
@@ -30,7 +34,9 @@ const promocoes: Game[] = [
     'Italiana',
     0,
     'Queijos selecionados',
-    Pizza
+    Pizza,
+    52.9,
+    'Serve 2 pessoas'
   ),
   new Game(
     4,
@@ -39,7 +45,9 @@ const promocoes: Game[] = [
     'Italiana',
     0,
     'Presunto, ovos e cebola',
-    Pizza
+    Pizza,
+    55.9,
+    'Serve 2 pessoas'
   ),
   new Game(
     5,
@@ -48,7 +56,9 @@ const promocoes: Game[] = [
     'Italiana',
     0,
     'Calabresa e cebola',
-    Pizza
+    Pizza,
+    47.9,
+    'Serve 2 pessoas'
   ),
   new Game(
     6,
@@ -57,10 +67,11 @@ const promocoes: Game[] = [
     'Italiana',
     0,
     'Frango desfiado',
-    Pizza
+    Pizza,
+    56.9,
+    'Serve 2 pessoas'
   )
 ]
-
 const Categories = () => (
   <>
     <Banner

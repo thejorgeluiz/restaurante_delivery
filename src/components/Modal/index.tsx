@@ -1,14 +1,23 @@
 import { CloseButton, Content, ModalContainer, Overlay, Image } from './styles'
-import image from '../../assets/imagens/pizza.png'
 type Props = {
   isOpen: boolean
   onClose: () => void
   image: string
   title: string
   description: string
+  price: number
+  serving: string
 }
 
-const Modal = ({ isOpen, onClose, image, title, description }: Props) => {
+const Modal = ({
+  isOpen,
+  onClose,
+  image,
+  title,
+  description,
+  price,
+  serving
+}: Props) => {
   if (!isOpen) return null
 
   return (
@@ -22,7 +31,9 @@ const Modal = ({ isOpen, onClose, image, title, description }: Props) => {
           <h3>{title}</h3>
           <p>{description}</p>
 
-          <button>Adicionar ao carrinho</button>
+          <span>Serve: {serving}</span>
+
+          <button>Adicionar ao carrinho – R$ {price.toFixed(2)}</button>
         </Content>
       </ModalContainer>
     </Overlay>
