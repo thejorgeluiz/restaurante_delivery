@@ -6,6 +6,7 @@ import { GlobalCss } from './styles'
 
 import Rotas from './routes'
 import Footer from './components/Footer'
+import Cart from './components/Cart'
 
 function AppWrapper() {
   const location = useLocation()
@@ -18,6 +19,7 @@ function AppWrapper() {
       <GlobalCss />
       {isHomePage ? <Header /> : <HeaderCategories />}
       <Rotas />
+      <Cart />
       <Footer />
     </>
   )
