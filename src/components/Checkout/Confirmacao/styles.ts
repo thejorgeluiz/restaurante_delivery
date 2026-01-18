@@ -20,6 +20,9 @@ export const Text = styled.p`
   font-size: 14px;
   margin-bottom: 12px;
   line-height: 1.4;
+  &:last-of-type {
+    margin-bottom: 24px;
+  }
 `
 
 export const Button = styled.button`
