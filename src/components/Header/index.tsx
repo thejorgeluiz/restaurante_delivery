@@ -1,7 +1,5 @@
 import { HeaderBar, CenterContent } from './styles'
 import logo from '../../assets/imagens/logo.png'
-import carrinho from '../../assets/imagens/carrinho.svg'
-import { Link } from 'react-router-dom'
 
 const Header = () => (
   <HeaderBar>
