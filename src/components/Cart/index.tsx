@@ -64,7 +64,7 @@ const Cart = () => {
             </CheckoutButton>
           </>
         ) : (
-          <Checkout onBackToCart={() => setShowCheckout(false)} />
+          <Checkout />
         )}
       </CartContainer>
     </>

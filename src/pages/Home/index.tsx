@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import ProductsList from '../../components/ProductsList'
+import { Restaurant } from '../../../src/models/Restaurant'
 
 const Home = () => {
-  const [restaurants, setRestaurants] = useState<any[]>([])
+  const [restaurants, setRestaurants] = useState<Restaurant[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {

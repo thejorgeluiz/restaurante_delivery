@@ -1,5 +1,5 @@
 import { CartContainer } from '../../Cart/styles'
-import { Container, Title, Text, OrderNumber, Button } from './styles'
+import { Title, Text, OrderNumber, Button } from './styles'
 
 type Props = {
   orderId: string

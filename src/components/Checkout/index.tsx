@@ -9,11 +9,7 @@ import Confirmacao from './Confirmacao/Confirmacao'
 
 type Step = 'entrega' | 'pagamento' | 'confirmacao'
 
-type Props = {
-  onBackToCart: () => void
-}
-
-const Checkout = ({ onBackToCart }: Props) => {
+const Checkout = () => {
   const dispatch = useDispatch()
   const items = useSelector((state: RootState) => state.cart.items)
 
