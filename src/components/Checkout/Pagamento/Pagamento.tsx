@@ -28,6 +28,17 @@ type Props = {
   onFinish: () => void | Promise<void>
 }
 
+const validarPagamento = (data: PaymentData) => {
+  if (!data.name.trim()) return 'Informe o nome no cartão'
+  if (!/^\d{16}$/.test(data.cardNumber.replace(/\s/g, '')))
+    return 'Número do cartão inválido'
+  if (!/^\d{3}$/.test(data.cvv)) return 'CVV inválido'
+  if (!/^\d{2}$/.test(data.expiresMonth)) return 'Mês inválido'
+  if (!/^\d{4}$/.test(data.expiresYear)) return 'Ano inválido'
+
+  return null
+}
+
 const Pagamento = ({ data, setData, onBack, onFinish }: Props) => {
   const items = useSelector((state: RootState) => state.cart.items)
 
@@ -41,6 +52,17 @@ const Pagamento = ({ data, setData, onBack, onFinish }: Props) => {
 
     setForm(updated)
     setData(updated)
+  }
+
+  const handleFinish = () => {
+    const erro = validarPagamento(form)
+
+    if (erro) {
+      alert(erro)
+      return
+    }
+
+    onFinish()
   }
 
   return (
@@ -58,7 +80,7 @@ const Pagamento = ({ data, setData, onBack, onFinish }: Props) => {
 
         <Field className="full">
           <label>Nome no cartão</label>
-          <input />
+          <input name="name" value={form.name} onChange={handleChange} />
         </Field>
 
         <Row>
@@ -99,7 +121,8 @@ const Pagamento = ({ data, setData, onBack, onFinish }: Props) => {
       </FormContainer>
 
       <ButtonsContainer>
-        <Button onClick={onFinish}>Finalizar pagamento</Button>
+        <Button onClick={handleFinish}>Finalizar pagamento</Button>
+
         <ButtonSecondary onClick={onBack}>
           Voltar para a edição de endereço
         </ButtonSecondary>

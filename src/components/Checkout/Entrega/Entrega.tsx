@@ -1,6 +1,7 @@
 import { FormEntrega, Botoes } from './styles'
-
 import { CartContainer } from '../../Cart/styles'
+import React from 'react'
+
 type DeliveryData = {
   receiver: string
   address: string
@@ -15,6 +16,16 @@ type Props = {
   setData: React.Dispatch<React.SetStateAction<DeliveryData>>
   onBack: () => void
   onContinue: () => void
+}
+
+const validarEntrega = (data: DeliveryData) => {
+  if (!data.receiver.trim()) return 'Informe quem irá receber'
+  if (!data.address.trim()) return 'Informe o endereço'
+  if (!data.city.trim()) return 'Informe a cidade'
+  if (!/^\d{8}$/.test(data.cep)) return 'CEP deve ter 8 números'
+  if (!data.number.trim()) return 'Informe o número'
+
+  return null
 }
 
 const Entrega = ({ data, setData, onBack, onContinue }: Props) => {
@@ -75,7 +86,19 @@ const Entrega = ({ data, setData, onBack, onContinue }: Props) => {
       </FormEntrega>
 
       <Botoes>
-        <button onClick={onContinue}>Continuar com pagamento</button>
+        <button
+          onClick={() => {
+            const erro = validarEntrega(data)
+            if (erro) {
+              alert(erro)
+              return
+            }
+
+            onContinue()
+          }}
+        >
+          Continuar com pagamento
+        </button>
 
         <button onClick={onBack}>Voltar para o carrinho</button>
       </Botoes>
